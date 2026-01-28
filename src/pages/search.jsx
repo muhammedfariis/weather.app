@@ -4,7 +4,7 @@ import {getCityWeather , getLocationWeather} from "../api/weatherapi"
 import {SearchIcon} from "lucide-react"
 
  const Search = ({setWeatherData})=>{
-  const [city , setCity] = useState(null)
+  const [city , setCity] = useState("")
   const go = useNavigate()
    
   const searchCity = async ()=>{
