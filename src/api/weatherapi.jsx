@@ -3,8 +3,13 @@ import axios from "axios";
 const apikey = import.meta.env.VITE_WEATHER_API_KEY;
 
 
+console.log("apiKey: ", apikey)
+console.log("apiKey: ", typeof apikey)
+
+
+
 export const getCityWeather = (city) => {
-  return axios.get("https://api.openweathermap.org/data/2.5/weather", {
+  return axios.get(`https://api.openweathermap.org/data/2.5/weather`, {
     params: {
       q: city,
       appid: apikey,
@@ -14,7 +19,7 @@ export const getCityWeather = (city) => {
 };
 
 export const getLocationWeather = (lat, lon) => {
-  return axios.get("https://api.openweathermap.org/data/2.5/forecast", {
+  return axios.get(`https://api.openweathermap.org/data/2.5/weather`, {
     params: {
       lat,
       lon,

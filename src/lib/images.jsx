@@ -1,23 +1,25 @@
-export const imageWeathers = (weather) => {
-  const main = weather.weather[0].main;
-  const isNight = weather.weather[0].icon.inlcude("n");
+export const imageWeathers = (data) => {
+  if (!data || !data.weather || !data.weather[0]) return "";
+
+  const main = data.weather[0].main;
+  
 
   if (main === "Tornado") {
-    return "/public/images/Tornado.png";
+    return "/images/Tornado.png";
   }
 
   if (main === "Rain") {
-    if (isNight) return "/public/images/moon-rain.png";
-    return "/public/images/sun-rain-angle.png";
+    return "/images/sun-rain-angle.png";
   }
 
   if (main === "Clouds") {
-    if (isNight) return "/public/images/moon-windy.png";
-    return "/public/images/moon-windy.png";
+    return "/images/sun-rain.png"
+     ;
   }
 
-  if (main === "Clear") {
-    if (isNight) return "/public/images/moon-windy.png";
-    return "/public/images/moon-windy.png";
+  if (main === "Clear"){
+    return "/images/moon-rain.png"
   }
+
+  
 };
