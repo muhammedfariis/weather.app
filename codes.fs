@@ -181,7 +181,7 @@
 
 // ## 🔹 9. Search Page – `pages/Search.jsx`
 
-// ```jsx
+// // ```jsx
 // import { useState } from "react";
 // import { useNavigate } from "react-router-dom";
 // import { getCityWeather, getLocationWeather } from "../api/weatherApi";
@@ -229,7 +229,7 @@
 // export default Search;
 // ```
 
-// ---
+---
 
 // ## 🔹 10. Home Page – `pages/Home.jsx`
 
