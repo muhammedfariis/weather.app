@@ -16,7 +16,10 @@ function Home({ weatherData }) {
   }
 
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center">
+    <div className="min-h-screen  bg-cover bg-center flex flex-col justify-center items-center"
+     style={{backgroundImage: "url('/images/bg.jpg')"}}
+    >
+      
       <h1 className="text-3xl">{data.city}</h1>
       <h2 className="text-6xl">{Math.round(data.temp)}°</h2>
     </div>

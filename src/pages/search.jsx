@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { getCityWeather } from "../api/weatherapi";
-import {SearchIcon , } from "lucide-react"
+import {SearchIcon} from "lucide-react"
 
 const Search = ({ setWeatherData }) => {
   const [city, setCity] = useState("");
@@ -28,12 +28,15 @@ const Search = ({ setWeatherData }) => {
   };
 
 return (
-  <div className="min-h-screen  p-5 flex justify-center items-center w-full">
+  <div className="min-h-screen bg-cover bg-center p-5 flex justify-center items-center w-full"
+     style={{backgroundImage: "url('/images/bg.jpg')"}}
+  
+  >
     <div className="flex items-center justify-center gap-2">
-      <SearchIcon className="relative left-8" size={20} />
+      <SearchIcon className="relative left-8 z-20" size={20} />
 
       <input
-        className="outline-none rounded-2xl w-100 h-10 pl-7 bg-red-400"
+        className="outline-none rounded-2xl w-100 h-10 pl-7 backdrop-blur-3xl shadow-2xl border-2   border-blue-500 hover:border-2  hover:bg-linear-to-bl from-30% from-red-500 to-55% to-blue-600 "
         type="text"
         placeholder="Search City.."
         required
