@@ -1,7 +1,6 @@
-import { FaPlus, FaLocationArrow, FaHome } from "react-icons/fa";
+import { Plus , HomeIcon , LocateIcon} from "lucide-react";
 import { useNavigate, Link } from "react-router-dom";
 import { getLocationWeather } from "../api/weatherapi";
-import { loadConfigFromFile } from "vite";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -25,17 +24,17 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           <div>
             <button onClick={getCurrentLocation}>
-              <FaLocationArrow size={22} />
+              <LocateIcon size={22} />
             </button>
           </div>
           <div>
             <Link to="/search">
-              <FaPlus size={22} />
+              <Plus size={22} />
             </Link>
           </div>
           <div>
             <Link to="/">
-              <FaHome size={22} />
+              <HomeIcon size={22} />
             </Link>
           </div>
         </div>
