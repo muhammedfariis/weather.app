@@ -28,7 +28,7 @@ function Home({ weatherData }) {
 
   return (
     <div
-      className="min-h-screen  bg-cover bg-center flex flex-col justify-center p-5 items-center"
+      className="min-h-screen   bg-cover bg-center flex flex-col justify-center p-5 items-center"
       style={{ backgroundImage: "url('/images/bg.jpg')" }}
     >
       {" "}
