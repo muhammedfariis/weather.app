@@ -1,10 +1,10 @@
 import { Plus, HomeIcon, LocateIcon } from "lucide-react";
 import { useNavigate, Link } from "react-router-dom";
 import { getLocationWeather } from "../api/weatherapi";
+import { useState } from "react";
 
 const Navbar = () => {
-  const navigate = useNavigate();
-
+const [animate , setanimate] = useState(true)
   const getCurrentLocation = () => {
     navigator.geolocation.getCurrentPosition(
       (pos) => {
@@ -33,7 +33,7 @@ const Navbar = () => {
         </div>
         <div className="rounded-full border-2 h-10 w-10 flex justify-center items-center border-blue-500 hover:border-2 hover:border-black hover:bg-linear-to-tr from-30% from-red-500 shadow-2xl">
           <Link to="/search">
-            <Plus size={30} color="blue" />
+            <Plus size={30} color="blue"  />
           </Link>
         </div>
         <div className="rounded-full border-2 h-10 w-10 flex justify-center items-center border-blue-500 hover:border-2 hover:border-black hover:bg-linear-to-tr from-30% from-red-500 shadow-2xl">
