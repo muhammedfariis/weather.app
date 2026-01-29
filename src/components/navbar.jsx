@@ -4,7 +4,6 @@ import { getLocationWeather } from "../api/weatherapi";
 import { useState } from "react";
 
 const Navbar = () => {
-const [animate , setanimate] = useState(true)
   const getCurrentLocation = () => {
     navigator.geolocation.getCurrentPosition(
       (pos) => {
@@ -17,9 +16,7 @@ const [animate , setanimate] = useState(true)
       (err) => {
         alert("Location permission denied");
       },
-      {
-        enableHighAccuracy: true,
-      },
+    
     );
   };
 
