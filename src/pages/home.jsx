@@ -52,7 +52,7 @@ function Home({ weatherData }) {
           <h1 className="text-3xl font-bold">{data.city} </h1>
           <h2 className="text-5xl font-bold">{Math.round(data.temp)}°</h2>
           <img
-            className="h-10 w-10 "
+            className="h-15 w-15 "
             src={tempimage()}
             alt=""
           />
