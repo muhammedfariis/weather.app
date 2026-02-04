@@ -11,15 +11,13 @@ const Search = ({ setWeatherData }) => {
   const searchCity = async () => {
     try {
       if (!city.trim()) return;
-
       const res = await getCityWeather(city);
-
       const data = {
         city: res.data.name,
         temp: res.data.main.temp,
         weather: res.data.weather[0],
       };
-
+      
       localStorage.setItem("weatherData", JSON.stringify(data));
       setWeatherData(data);
       navigate("/");
